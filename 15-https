@@ -6,8 +6,7 @@ mkdir /etc/nginx/servers
 # Enable HTTP server
 mv /etc/nginx/disabled-server-http.conf /etc/nginx/servers/http.conf
 
-if [ -f /config/letsencrypt.config ]; then 
-    . /config/letsencrypt.config
+if [[ -n "$LETS_ENCRYPT_DOMAIN" ]]; then
 
     # Let's Encrypt works by querying the web server over HTTP in order
     # to issue the certificates, so we need to start Nginx temporarily

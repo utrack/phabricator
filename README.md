@@ -67,6 +67,8 @@ To enable SSL, place `cert.pem` and `cert.key` files alongside `script.pre`.  Th
 container will automatically detect the presence of the certificates and configure
 Nginx to run with SSL enabled.
 
+Alternatively, you can use the Let's Encrypt service. To do so, set the `LETS_ENCRYPT_DOMAIN` and `LETS_ENCRYPT_EMAIL` variables.
+
 Linking to a DB container
 ---------------------------
 
